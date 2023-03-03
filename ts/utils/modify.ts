@@ -3,7 +3,7 @@ import getHSL from "./get-hsl"
 import getRGB from "./get-rgb"
 import type { ColorSet, ModifyOptions } from "./types"
 
-const modify = function (
+const generateModifiedColorPalette = function (
   colorSet: ColorSet,
   {
     RGBTransformer = (_prop, RGB) => RGB,
@@ -24,4 +24,4 @@ const modify = function (
   return newColorSet
 }
 
-export default modify
+export default generateModifiedColorPalette

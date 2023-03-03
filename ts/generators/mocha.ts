@@ -11,7 +11,7 @@ const MOD = {
   blue: 3,
 }
 
-const modded_mocha = modify(MOCHA, {
+const moddedMocha = modify(MOCHA, {
   HSLTransformer(prop, HSL) {
     return {
       h: HSL.h,
@@ -41,8 +41,8 @@ const modded_mocha = modify(MOCHA, {
   },
 })
 
-const CSS: string = generateCSS("mocha", modded_mocha)
+const CSS: string = generateCSS("mocha", moddedMocha)
 
-console.log(JSON.stringify(modded_mocha, null, 2))
+console.log(JSON.stringify(moddedMocha, null, 2))
 console.log("\n\n")
 console.log(CSS)
